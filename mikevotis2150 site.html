@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mikevotis2150</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* Στυλ για modal popup */
+    #book-modal {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.6);
+      z-index: 1000;
+    }
+    #book-modal .modal-content {
+      background: white;
+      padding: 20px;
+      width: 90%;
+      max-width: 400px;
+      margin: 10% auto;
+      border-radius: 10px;
+      text-align: center;
+    }
+    #book-modal input, #book-modal button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+
+
+
+ <!-- Μικρό popup κάτω δεξιά -->
+  <div id="newsletter-widget">
+    <button id="close-widget">✖</button>
+    <h4>Εγγραφή στο Newsletter</h4>
+    <p>Μείνε ενημερωμένος με νέα και περιεχόμενο!</p>
+    <input type="email" id="widget-email" placeholder="Το email σου">
+    <button onclick="submitWidget()">Εγγραφή</button>
+  </div>
+
+  <script>
+    // Εμφάνιση widget αν δεν έχει εγγραφεί
+    window.onload = function() {
+      if (!localStorage.getItem("newsletterSeen")) {
+        document.getElementById("newsletter-widget").style.display = "block";
+      }
+    };
+
+    // Κλείσιμο widget
+    document.getElementById("close-widget").onclick = function() {
+      document.getElementById("newsletter-widget").style.display = "none";
+      localStorage.setItem("newsletterSeen", "true");
+    };
+
+    // Υποβολή εγγραφής
+    function submitWidget() {
+      const email = document.getElementById("widget-email").value;
+      if (email.trim() === "") {
+        alert("Παρακαλώ εισάγετε email.");
+        return;
+      }
+
+      alert("Ευχαριστούμε για την εγγραφή!");
+      document.getElementById("newsletter-widget").style.display = "none";
+      localStorage.setItem("newsletterSeen", "true");
+    }
+  </script>
+
+  <script>
+window.onload = function() {
+  // Πηγαίνει στην κορυφή κάθε φορά που φορτώνει η σελίδα
+  window.scrollTo(0, 0);
+};
+
+
+</script>
+
+  <nav>
+  <ul>
+    <li><a href="#top">Αρχική</a></li>
+    <li><a href="#about">Σχετικά</a></li>
+    <li><a href="#videos">Βίντεο</a></li>
+    <li><a href="#faq-submit">Ερωτήσεις</a></li>
+    <li><a href="#contact-form">Επικοινωνία</a></li>
+  </ul>
+</nav>
+
+  <header>
+    <img src="https://yt3.googleusercontent.com/pcLEsklGqMVzjUTTf-Sxmk4lj9FfudiAOTqlA7dYZjmjnIc-ecSGFSF37sD_Z9aXDMeWaXCjlQ=s160-c-k-c0x00ffffff-no-rj" alt="Mikevotis2150 Logo" class="logo" />
+    <h1>Καλώς ήρθες στο κανάλι Mikevotis2150!</h1>
+  </header>
+
+
+ 
+
+
+  <main>
+    <section class="about" id="about">
+      <h2>Λίγα λόγια για μένα</h2>
+      <p>Γεια σας! Είμαι ο Mikevotis2150 και φτιάχνω gaming βίντεο, livestreams και πολλά ακόμα! Ακολούθησέ με για διασκέδαση, δράση και περιπέτεια!</p>
+    </section>
+    <br>
+     <footer id="subs">
+    <section id="live-subs">
+       <h2>Live <span style="color: #eb1a28;">Subs</span> :</h2>
+      <p id="sub-count">Φόρτωση...</p>
+    </section>
+
+    <div id="live-date-time" style="font-weight: bold; font-size: 1.2rem;"></div>
+</footer>
+
+
+   
+    <section class="videos">
+      <h2>Δες τα τελευταία μου βίντεο</h2>
+      <p> Επισκέψου το κανάλι μου στο <span style="color: red;">YouTube <img id="youte" src="https://cdn3.iconfinder.com/data/icons/social-network-30/512/social-06-512.png" alt="image YouTube"></span> και μην ξεχάσεις να κάνεις <span style="color: red;">εγγραφή</span>!</p>
+      <a href="https://www.youtube.com/@mikevotis" target="_blank" class="btn">Μετάβαση στο κανάλι</a>
+    </section>
+
+    <section id="videos">
+  <h2> Κάποια βίντεο μου</h2>
+  <div class="video-grid">
+    <iframe src="https://www.youtube.com/embed/vLRXAa9wewQ" 
+            title="Βίντεο 1" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+
+    <iframe src="https://www.youtube.com/embed/wY9vCDco9-s" 
+            title="Βίντεο 2" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+
+    <iframe src="https://www.youtube.com/embed/Irrba9zGX8Q" 
+            title="Βίντεο 3" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+  </div>
+</section>
+
+
+    <section id="header2">
+      <a href="#" id="buy">Κατέβασε το βιβλίο μου Python τώρα</a>
+      <img id="img-book" src="https://bigblue.academy/images/image/blog/python-courses-how-to-start-from-0/4705152466419712(1).jpg" alt="image book">
+    </section>
+
+  
+  <!-- Modal -->
+<div id="book-modal">
+  <div class="modal-content">
+    <h3 style="color: #eb1a28;">Βάλε το email σου για να λάβεις το βιβλίο:</h3>
+    <form id="book-form">
+      <input type="email" id="book-email" name="email" placeholder="Το email σου" required>
+      
+      <!-- Κρυμμένα αρχικά -->
+      <div id="book-instructions" style="display: none;">
+        <h1 style="color: rgb(228, 38, 38);">
+          *Για να κατέβει το αρχείο πάτα <span style="color: #0077cc;"><b>διπλό</b></span> click στο λήψη
+        </h1>
+        <input type="hidden" name="message" value="Ευχαριστούμε! Κατέβασε το βιβλίο από εδώ: https://docs.google.com/document/d/1XLnJmYEFLvXBbZ3M4LQsac8bip14jSWq3rHjYl5AQZ0/export?format=pdf">
+        <button type="submit">Λήψη Βιβλίου</button>
+      </div>
+
+      <button type="button" id="close-modal">Άκυρο</button>
+    </form>
+    <p id="book-response" style="display:none; font-weight:bold;"></p>
+  </div>
+</div>
+
+    <h1><span style="color: #0077cc;">Επικοινώνησε</span> μαζί μου <span style="color: #eb1a28;"> συμπληρώνοντας </span> την παρακάτω <span style="color:#0077cc;">φόρμα</span> <span><b>:</b></span></h1>
+    <form id="contact-form">
+      <input type="text" name="name" placeholder="Το όνομά σου" required><br>
+      <input type="email" name="email" placeholder="Το email σου" required><br>
+      <textarea name="message" rows="5" placeholder="Το μήνυμά σου" required></textarea><br>
+      <button id="submitButton" type="submit">Αποστολή</button>
+    </form>
+
+    <p id="response-message" style="color: green; display: none; font-weight: bold;"></p>
+
+
+    <section class="faq">
+  <h2>Συχνές Ερωτήσεις</h2>
+  <p><strong> Πόσο χρονών είσαι</strong><br> Είμαι 12 ετών</p>
+  <hr>
+  <p><strong> Τι εξοπλισμό χρησιμοποιείς;</strong><br> OBS, razer basilisk v3, RTX GPU, stream deck.</p>
+</section>
+
+<section id="faq-submit">
+  <h2> Ρώτησέ με κάτι!</h2>
+  <form id="faq-form">
+    <input type="text" name="name" placeholder="Το όνομά σου" required>
+    <input type="email" name="email" placeholder="Το email σου" required>
+    <textarea name="question" placeholder="Η ερώτησή σου..." required></textarea>
+    <button type="submit">Υποβολή Ερώτησης</button>
+    <p id="faq-response" style="display:none; font-weight:bold;"></p>
+  </form>
+</section>
+
+<script>
+  const faqForm = document.getElementById("faq-form");
+  const faqResponse = document.getElementById("faq-response");
+
+  faqForm.addEventListener("submit", async function(e) {
+    e.preventDefault();
+
+    const formData = new FormData(faqForm);
+
+    try {
+      const response = await fetch("https://formspree.io/f/mjkryvew", {
+        method: "POST",
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (response.ok) {
+        faqResponse.textContent = "✅ Η ερώτησή σου υποβλήθηκε! Θα σου απαντήσω σύντομα.";
+        faqResponse.style.display = "block";
+        faqForm.reset();
+      } else {
+        faqResponse.textContent = "❌ Υπήρξε πρόβλημα. Δοκίμασε ξανά.";
+        faqResponse.style.color = "red";
+        faqResponse.style.display = "block";
+      }
+    } catch (error) {
+      faqResponse.textContent = "❌ Σφάλμα σύνδεσης.";
+      faqResponse.style.color = "red";
+      faqResponse.style.display = "block";
+    }
+  });
+</script>
+
+
+<script>
+fetch("")
+  .then(response => response.text())
+  .then(csv => {
+    const lines = csv.split('\n').slice(1); // αγνοούμε την 1η γραμμή (τίτλοι)
+    const list = document.getElementById("review-list");
+
+    lines.forEach(row => {
+      const cells = row.split(',');
+      const comment = cells[1]; // η 2η στήλη (πρώτη είναι το timestamp)
+      if (comment && comment.trim() !== "") {
+        const li = document.createElement("li");
+        li.textContent = "🗨️ " + comment.trim();
+        li.style.padding = "10px";
+        li.style.borderBottom = "1px solid #ddd";
+        list.appendChild(li);
+      }
+    });
+  });
+</script>
+
+
+
+
+
+    <div class="socials">
+      <h3>Ακολούθησέ με:</h3>
+      <a href="https://discord.gg/yourinvite" target="_blank"><img id="discord" src="https://cdn.ultiworld.com/wordpress/wp-content/uploads/2025/01/discord-icon-square-blue.png" alt="Discord"></a> 
+      <a href="https://www.youtube.com/@mikevotis" target="_blank"><img id="youtube" src="https://cdn3.iconfinder.com/data/icons/social-network-30/512/social-06-512.png" alt="YouTube"></a> 
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Mikevotis2150. Όλα τα δικαιώματα διατηρούνται.</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    const form = document.getElementById("contact-form");
+    const submitButton = document.getElementById("submitButton");
+    const responseMessage = document.getElementById("response-message");
+
+    form.addEventListener("submit", async function(event) {
+      event.preventDefault();
+      submitButton.disabled = true;
+      submitButton.textContent = "Αποστολή...";
+
+      const formData = new FormData(form);
+
+      try {
+        const response = await fetch("https://formspree.io/f/mjkryvew", {
+          method: "POST",
+          body: formData,
+          headers: { 'Accept': 'application/json' }
+        });
+
+        if (response.ok) {
+          responseMessage.textContent = "✅ Ευχαριστούμε για το μήνυμά σου!";
+          responseMessage.style.display = "block";
+          form.reset();
+        } else {
+          responseMessage.textContent = "❌ Υπήρξε πρόβλημα. Δοκίμασε ξανά!";
+          responseMessage.style.color = "red";
+          responseMessage.style.display = "block";
+        }
+      } catch (error) {
+        responseMessage.textContent = "❌ Σφάλμα σύνδεσης!";
+        responseMessage.style.color = "red";
+        responseMessage.style.display = "block";
+      }
+
+      submitButton.disabled = false;
+      submitButton.textContent = "Αποστολή";
+    });
+
+    // Βιβλίο Modal
+    const buyButton = document.getElementById("buy");
+    const bookModal = document.getElementById("book-modal");
+    const closeModal = document.getElementById("close-modal");
+    const bookForm = document.getElementById("book-form");
+    const bookResponse = document.getElementById("book-response");
+
+    buyButton.addEventListener("click", function(e) {
+      e.preventDefault();
+      bookModal.style.display = "block";
+    });
+
+    closeModal.addEventListener("click", function() {
+      bookModal.style.display = "none";
+    });
+
+    bookForm.addEventListener("submit", async function(e) {
+      e.preventDefault();
+      const formData = new FormData(bookForm);
+
+      try {
+        const response = await fetch("https://formspree.io/f/mjkryvew", {
+          method: "POST",
+          body: formData,
+          headers: { 'Accept': 'application/json' }
+        });
+
+        if (response.ok) {
+          bookResponse.textContent = "✅Το βιβλίο κατέβηκε!";
+          bookResponse.style.display = "block";
+          bookResponse.style.color = "green";
+
+
+          // Κατέβασμα PDF
+          const link = document.createElement("a");
+          link.href = "https://docs.google.com/document/d/1XLnJmYEFLvXBbZ3M4LQsac8bip14jSWq3rHjYl5AQZ0/export?format=pdf";
+          link.download = "Python_Book.pdf";
+          document.body.appendChild(link);
+          link.click();
+          document.body.removeChild(link);
+
+          bookForm.reset();
+        } else {
+          bookResponse.textContent = "❌ Αποτυχία αποστολής email.";
+          bookResponse.style.color = "red";
+          bookResponse.style.display = "block";
+        }
+      } catch (error) {
+        bookResponse.textContent = "❌ Σφάλμα σύνδεσης.";
+        bookResponse.style.color = "red";
+        bookResponse.style.display = "block";
+      }
+    });
+
+    setInterval(getSubscribers, 3000);
+
+  </script>
+
+  <div id="disqus_thread"></div>
+<script>
+var disqus_config = function () {
+  this.page.url = window.location.href;
+  this.page.identifier = "kritikes-selida-mou";
+};
+(function() {
+  var d = document, s = d.createElement('script');
+  s.src = 'https://YOUR-SHORTNAME.disqus.com/embed.js'; // βάλε το shortname σου
+  s.setAttribute('data-timestamp', +new Date());
+  (d.head || d.body).appendChild(s);
+})();
+</script>
+
+
+  <script>
+  const apiKey = "AIzaSyC8MKkC25RFnj-Hoe2T7nqb18xrimUf3dQ";
+  const channelId = "UC4DTQOXYjscTYdaL_b-puEA";
+
+  async function getSubscribers() {
+    const response = await fetch(`https://www.googleapis.com/youtube/v3/channels?part=statistics&id=${channelId}&key=${apiKey}`);
+    const data = await response.json();
+    const subs = data.items[0].statistics.subscriberCount;
+    document.getElementById("sub-count").innerText = ` ${subs} εγγεγραμμένοι`;
+  }
+
+  getSubscribers();
+</script>
+
+<script>
+  function updateDateTime() {
+    const now = new Date();
+    const options = {
+      weekday: 'long',
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric',
+      hour: '2-digit',
+      minute: '2-digit',
+      second: '2-digit'
+    };
+
+    const formatted = now.toLocaleDateString('el-GR', options);
+    document.getElementById("live-date-time").innerText = ` ${formatted}`;
+  }
+
+  // Εκκίνηση και ανανέωση κάθε 1 δευτερόλεπτο
+  updateDateTime();
+  setInterval(updateDateTime, 1000);
+</script>
+<script>
+  const emailInput = document.getElementById("book-email");
+  const instructions = document.getElementById("book-instructions");
+
+  // Όταν γράφει email, ελέγχει αν είναι έγκυρο
+  emailInput.addEventListener("input", () => {
+    if (emailInput.checkValidity()) {
+      instructions.style.display = "block";
+    } else {
+      instructions.style.display = "none";
+    }
+  });
+</script>
+
+
+
+</body>
+</html>
