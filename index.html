@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Κριτικές - Mikevotis</title>
+</head>
+<body>
+  <h1>Καλωσήρθες στο site μου!</h1>
+  <p>Γράψε τη γνώμη σου στα σχόλια παρακάτω:</p>
+
+  <div id="disqus_thread"></div>
+  <script>
+  var disqus_config = function () {
+    this.page.url = window.location.href;
+    this.page.identifier = "mikevotis-comments-page";
+  };
+  (function() {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://mikevotis2150-20site-html.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+  </script>
+  <noscript>Παρακαλώ ενεργοποίησε τη JavaScript για να δεις τα σχόλια μέσω Disqus.</noscript>
+</body>
+</html>
